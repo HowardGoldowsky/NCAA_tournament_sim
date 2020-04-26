@@ -1,10 +1,10 @@
-#! /usr/bin/env python
+#!/usr/bin/env python3
 
 # MarchMadness.py
 # A very small NCAA basketball simulation game, with eight hard-coded teams.
 # Written by Howard Goldowsky, 2013
 
-import Tkinter
+import tkinter
 import random
 import time
 
@@ -33,7 +33,7 @@ class Application():
         self.timePosY = 50
         self.round = 0
         self.time_remain = 120
-        self.play_button = Tkinter.Button(text='Play!', command=self.PlayGames)
+        self.play_button = tkinter.Button(text='Play!', command=self.PlayGames)
         self.play_button.place(x=290, y=20, width=100, height=20)
         self.time_text = w.create_text(self.timePosX, self.timePosY, text=self.time_remain, anchor='w')
         self.time_label = w.create_text(self.timePosX - 100, self.timePosY, text='Time Remaining:', anchor='w',
@@ -165,9 +165,9 @@ class Application():
 # Begin the main program
 
 # Main program
-root = Tkinter.Tk()  # Root level window method call
+root = tkinter.Tk()  # Root level window method call
 root.title('March Madness')  # Add title to window
-w = Tkinter.Canvas(root, width=400, height=350)  # Create a canvas object, root as parent
+w = tkinter.Canvas(root, width=400, height=350)  # Create a canvas object, root as parent
 w.grid()  # Locate using pack()
 
 app = Application(root)  # Create an instance of the main app
